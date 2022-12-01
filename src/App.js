@@ -53,7 +53,7 @@ function Welcome({name}) {
   return(
     <section> 
       <h1 className= "User-name">
-        Hello,<span className="user-first-name"> {name}</span> 🎉🎉👍💕😊
+        Hello,<span className="user-first-name"> {name}</span> 🎉🎉👍💕
         </h1>
       </section>
   );
