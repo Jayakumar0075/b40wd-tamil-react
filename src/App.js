@@ -66,7 +66,7 @@ function User({pic,name}) {
     <section>
       <img className="user-profile-pic" src={pic} alt={name}/>  
       <h1 className= "User-name">
-        Hello,<span className="user-first-name"> {name}</span> 🎉🎉
+        Hello,<span className="user-first-name"> {name}</span> 🎉🎉🎉🎉👍💕
         </h1>;
       </section>
   );
@@ -88,6 +88,12 @@ function User({pic,name}) {
 //}
 
 export default App;
+
+//ctrl +` -> Terminal open/close
+// npm start
+//parent (data) -> child (data)
+// CI/CD- Continous Integration & Continous Deployment
+
 
 
 
