@@ -1,4 +1,4 @@
-export function Welcome({name}) {
+ function Welcome({name}) {
     // named export
     //console.log(props, typeof props);
     //const {pic name}= props;// Object destructuring (ES6)

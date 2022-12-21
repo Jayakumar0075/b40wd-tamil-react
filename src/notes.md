@@ -109,6 +109,7 @@ npm start -> To start terminal
 ### React.StrictMode - Error checking
 
 1.  Displays Error in console
+    npm
 
 ### function to be considered as components
 
