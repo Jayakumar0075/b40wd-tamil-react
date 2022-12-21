@@ -1,4 +1,8 @@
+import { useState } from "react";
 import "./App.css";
+import{Welcome,double} from"./Welcome";// named import
+
+console.log(double(80));
 
 // App component = view + logic (Declaration)
 function App() {
@@ -36,28 +40,30 @@ function App() {
   {/* <Welcome name="Jayakumar"/>
    <Welcome name="selvi"/>
 <Welcome name="subha"/>*/}
-{/*
+
  { names.map((nm) => (
   <Welcome name={nm} />
- ))} */}
+ ))} 
  {users.map((usr) => (
   <User name={usr.name} pic={usr.pic} />
  ))}
-</div>
+ </div>
+  );
+}
+function Counter(){
+  // camelCase
+  let [like,setLike]= useState(0);
+  let [dislike,setDislike]= useState(0);
+  return(
+    <div>
+      {/* camelCase*/}
+      <button onClick={()=> setLike(like+ 1)}>👍 {like}</button>
+      <button onClick={()=> setDislike(dislike+ 1)}>👎 {dislike}</button>
+      </div>
   );
 }
 
-function Welcome({name}) {
-  //console.log(props, typeof props);
-  //const {pic name}= props;// Object destructuring (ES6)
-  return(
-    <section> 
-      <h1 className= "User-name">
-        Hello,<span className="user-first-name"> {name}</span> 🎉🎉👍💕
-        </h1>
-      </section>
-  );
-}
+
 //object destructuring (ES6)
 function User({pic,name}) {
   //console.log(props, typeof props);
@@ -65,9 +71,10 @@ function User({pic,name}) {
   return(
     <section>
       <img className="user-profile-pic" src={pic} alt={name}/>  
-      <h1 className= "User-name">
+      <h2 className= "User-name">
         Hello,<span className="user-first-name"> {name}</span> 🎉🎉🎉🎉👍💕
-        </h1>;
+        </h2>;
+        <Counter/>
       </section>
   );
 }
@@ -87,7 +94,7 @@ function User({pic,name}) {
   //);
 //}
 
-export default App;
+export default App; // default export
 
 //ctrl +` -> Terminal open/close
 // npm start
